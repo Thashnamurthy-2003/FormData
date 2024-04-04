@@ -1,0 +1,1 @@
+The primary objective of this project is to develop a streamlined system that allows users to input data through a web interface (using formData), eliminating the need for manual data entry. The collected data will then be automatically stored in an Excel spreadsheet, ensuring accuracy, efficiency, and ease of data management.
