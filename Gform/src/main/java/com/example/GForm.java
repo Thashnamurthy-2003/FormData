@@ -26,18 +26,18 @@ public class GForm {
             return "index";
         }
 
-        // @GetMapping("/admin")
-        // public String admin() {
-        //     return "admin";
-        // }
+        @GetMapping("/admin")
+        public String admin() {
+            return "admin";
+        }
 
-        // @PostMapping("/admin")
-        // public String adminLogin(@RequestParam("username") String name, @RequestParam("password") String pass) {
-        //     if (name.equals("thachu") && pass.equals("123")) {
-        //         return "form";
-        //     }
-        //     return "username or password doesn't exist";
-        // }
+        @PostMapping("/admin")
+        public String adminLogin(@RequestParam("username") String name, @RequestParam("password") String pass) {
+            if (name.equals("thachu") && pass.equals("123")) {
+                return "form";
+            }
+            return "username or password doesn't exist";
+        }
 
         public String getMethodName(@RequestParam String param) {
             return new String();
@@ -48,7 +48,7 @@ public class GForm {
                 @RequestParam("rollno") String n3,
                 @RequestParam("email") String n4, @RequestParam("mobile") String n5, @RequestParam("cgpa") String n6,
                 @RequestParam("domain") String n7) {
-            String path = "form.csv";
+            String path = "src/main/resources/static/form.csv";
             try {
                 FileWriter write = new FileWriter(path, true);
 
@@ -60,7 +60,7 @@ public class GForm {
                 System.out.println(e.getMessage());
                 return ResponseEntity.status(500).body("Error occurred while writing to file.");
             }
-            return ResponseEntity.ok("Your data has been Sumbited ");
+            return ResponseEntity.ok("Your data has been Submitted ");
         }
 
     }
