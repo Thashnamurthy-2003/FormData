@@ -26,18 +26,18 @@ public class GForm {
             return "index";
         }
 
-        @GetMapping("/admin")
-        public String admin() {
-            return "admin";
-        }
+        // @GetMapping("/admin")
+        // public String admin() {
+        //     return "admin";
+        // }
 
-        @PostMapping("/admin")
-        public String adminLogin(@RequestParam("username") String name, @RequestParam("password") String pass) {
-            if (name.equals("thachu") && pass.equals("123")) {
-                return "form";
-            }
-            return "username or password doesn't exist";
-        }
+        // @PostMapping("/admin")
+        // public String adminLogin(@RequestParam("username") String name, @RequestParam("password") String pass) {
+        //     if (name.equals("thachu") && pass.equals("123")) {
+        //         return "form";
+        //     }
+        //     return "username or password doesn't exist";
+        // }
 
         public String getMethodName(@RequestParam String param) {
             return new String();
